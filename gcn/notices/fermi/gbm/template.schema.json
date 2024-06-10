@@ -1,0 +1,104 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/template.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fermi/GBM template -- TODO: Edit this title.",
+  "description": "A template for Fermi GCN schemas.  TODO: Edit this description and the $id to match the title.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Distance.schema.json"
+    },
+    {
+      "$ref": "../../core/Duration.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/FollowUp.schema.json"
+    },
+    {
+      "$ref": "../../core/HardnessRatio.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/Orbit.schema.json"
+    },
+    {
+      "$ref": "../../core/Pointing.schema.json"
+    },
+    {
+      "$ref": "../../core/Redshift.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/GammaRay.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/models/Band.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/models/CutOffPowerLaw.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/models/PowerLaw.schema.json"
+    }
+  ],
+  "properties": {
+    "detectors_status": {
+      "type": "array",
+      "items": {
+        "$ref": "../core/DetectorStatus.schema.json"
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "Triggered detectors"
+    },
+    "trigger_algorithm": {
+      "type": "number",
+      "description": "Flight software triggering algorithm number"
+    },
+    "localization_algorithm": {
+      "type": "string",
+      "description": "Version."
+    },
+    "hardness_class": {
+      "enum": [
+        "hard",
+        "soft"
+      ],
+      "description": "Spectral class as determied by the algorithm"
+    },
+    "duration_class": {
+      "enum": [
+        "long",
+        "short"
+      ],
+      "description": "Duration class as determied by the algorithm"
+    },
+    "reliability_class": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Sub-treshold detection reliability in addition to any classification"
+    }
+  }
+}
