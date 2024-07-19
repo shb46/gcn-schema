@@ -79,25 +79,15 @@
       "description": "Version."
     },
     "hardness_class": {
-      "enum": [
-        "hard",
-        "soft"
-      ],
+      "enum": ["hard", "soft"],
       "description": "Spectral class as determied by the algorithm"
     },
     "duration_class": {
-      "enum": [
-        "long",
-        "short"
-      ],
+      "enum": ["long", "short"],
       "description": "Duration class as determied by the algorithm"
     },
     "reliability_class": {
-      "enum": [
-        "low",
-        "medium",
-        "high"
-      ],
+      "enum": ["low", "medium", "high"],
       "description": "Sub-treshold detection reliability in addition to any classification"
     }
   }
