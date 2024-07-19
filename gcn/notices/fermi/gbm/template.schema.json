@@ -98,7 +98,7 @@
         "medium",
         "high"
       ],
-      "description": "Sub-treshold detection reliability in addition to any classification"
+       "description": "Sub-treshold detection reliability in addition to any classification"
     }
   }
 }
