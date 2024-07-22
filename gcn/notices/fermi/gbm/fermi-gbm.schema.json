@@ -1,0 +1,163 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/template.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fermi/GBM template -- TODO: Edit this title.",
+  "description": "A template for Fermi GCN schemas.  TODO: Edit this description and the $id to match the title.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../core/AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../core/Alert.schema.json"
+    },
+    {
+      "$ref": "../../core/DateTime.schema.json"
+    },
+    {
+      "$ref": "../../core/Distance.schema.json"
+    },
+    {
+      "$ref": "../../core/Duration.schema.json"
+    },
+    {
+      "$ref": "../../core/Event.schema.json"
+    },
+    {
+      "$ref": "../../core/FollowUp.schema.json"
+    },
+    {
+      "$ref": "../../core/HardnessRatio.schema.json"
+    },
+    {
+      "$ref": "../../core/Localization.schema.json"
+    },
+    {
+      "$ref": "../../core/Pointing.schema.json"
+    },
+    {
+      "$ref": "../../core/Redshift.schema.json"
+    },
+    {
+      "$ref": "../../core/Reporter.schema.json"
+    },
+    {
+      "$ref": "../../core/Statistics.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/GammaRay.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/models/Band.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/models/CutOffPowerLaw.schema.json"
+    },
+    {
+      "$ref": "../../core/spectral/models/PowerLaw.schema.json"
+    }
+  ],
+  "properties": {
+    "detectors_status": {
+      "type": "array",
+      "items": {
+        "$ref": "../../core/DetectorStatus.schema.json"
+      },
+      "minItems": 14,
+      "maxItems": 14,
+      "description": "Triggered detectors"
+    },
+    "trigger_algorithm": {
+      "type": "number",
+      "description": "Flight software triggering algorithm number"
+    },
+    "localization_algorithm": {
+      "type": ["string"],
+      "description": "Version."
+    },
+    "hardness_class": {
+      "enum": ["soft", "hard"],
+      "description": "Spectral class as determied by the algorithm"
+    },
+    "duration_class": {
+      "enum": ["undefined", "short", "long", "not_used"],
+      "description": "Duration class as determied by the algorithm"
+    },
+    "reliability": {
+      "enum": ["low", "medium", "high"],
+      "description": "Sub-treshold detection reliability in addition to any classification"
+    },
+    "reliability_level": {
+      "enum": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "description": "Sub-treshold detection reliability in addition to any classification"
+    },
+    "ground_generated_notice": {
+      "type": "boolean",
+      "description": "true, if the notice was generated on the ground.  This can happen even for notices meant for flight."
+    },
+    "values_from_alert_notice": {
+      "type": "boolean",
+      "description": "If true, lat,long and detectors values are copied from te a;ert notice."
+    },
+    "high_energy_event": {
+      "type": "boolean",
+      "description": "The high-energy intensity exceeds some threshold."
+    },
+    "in_lat_fov": {
+      "type": "boolean",
+      "description": "Whether the transient was localized in the LAT field of view."
+    },
+    "gcn_classic_type": {
+      "type": "number",
+      "description": "The GCN Classic notice type"
+    },
+    "gcn_classic_name": {
+      "type": "string",
+      "description": "The GCN Classic notice name or title"
+    },
+    "known_blocked_source": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "catalog": {
+            "type": "string",
+            "description": "Catalog name"
+          },
+          "source_id": {
+            "type": "string",
+            "description": "The source ID in the catalog"
+          },
+          "source_type": {
+            "type": "string",
+            "description": "The source type"
+          },
+          "source_ra": {
+            "type": "number",
+            "description": "The source right ascension, converted to ISRC, if necessary."
+          },
+          "source_dec": {
+            "type": "number",
+            "description": "The source declination, converted to ISRC, if necessary."
+          }
+        }
+      },
+      "description": "An array of references to other transients, coinciding in time and/or space with the Fermi-GBM event reported in this notice."
+    },
+    "coincidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "$ref": "../../core/FollowUp.schema.json"
+          },
+          "in": {
+            "enum": ["space", "time", "spacetime"]
+          }
+        }
+      },
+      "description": "An array of references to other transients, coinciding in time and/or space with the Fermi-GBM event reported in this notice."
+    }
+  }
+}

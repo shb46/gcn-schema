@@ -33,9 +33,6 @@
       "$ref": "../../core/Localization.schema.json"
     },
     {
-      "$ref": "../../core/Orbit.schema.json"
-    },
-    {
       "$ref": "../../core/Pointing.schema.json"
     },
     {
@@ -61,34 +58,25 @@
     }
   ],
   "properties": {
-    "detectors_status": {
+    "sc_pointing": {
       "type": "array",
       "items": {
-        "$ref": "../core/DetectorStatus.schema.json"
+        "$ref": "../../core/Pointing.schema.json"
       },
-      "minItems": 14,
-      "maxItems": 14,
-      "description": "Triggered detectors"
+      "minItems": 1,
+      "description": "Pointing samples"
     },
-    "trigger_algorithm": {
+    "ground_generated_notice": {
+      "type": "boolean",
+      "description": "true, if the notice was generated on the ground.  This can happen even for notices meant for flight."
+    },
+    "gcn_classic_type": {
       "type": "number",
-      "description": "Flight software triggering algorithm number"
+      "description": "The GCN Classic notice type"
     },
-    "localization_algorithm": {
+    "gcn_classic_name": {
       "type": "string",
-      "description": "Version."
-    },
-    "hardness_class": {
-      "enum": ["hard", "soft"],
-      "description": "Spectral class as determied by the algorithm"
-    },
-    "duration_class": {
-      "enum": ["long", "short"],
-      "description": "Duration class as determied by the algorithm"
-    },
-    "reliability_class": {
-      "enum": ["low", "medium", "high"],
-      "description": "Sub-treshold detection reliability in addition to any classification"
+      "description": "The GCN Classic notice name or title"
     }
   }
 }
