@@ -1,8 +1,8 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/template.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/fermi-sc.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Fermi/GBM template -- TODO: Edit this title.",
-  "description": "A template for Fermi GCN schemas.  TODO: Edit this description and the $id to match the title.",
+  "title": "Schema for Fermi spacecraft GCN notices",
+  "description": "This schema reports the Fermi instrument pointing.",
   "type": "object",
   "allOf": [
     {
