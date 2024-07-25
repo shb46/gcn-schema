@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/fermi-gbm.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/fermi/gcn/notices/fermi/gbm/fermi-gbm.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Schema for Fermi GBM GCN notices",
   "description": "This schema is used to report on Fermi GBM transients, incl. detections from the gorund subthreshold search.",
