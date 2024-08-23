@@ -1,13 +1,41 @@
 {
-"$id":"https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMGeoLocBase.schema.json",
-"$schema":"https://json-schema.org/draft/2020-12/schema",
-"title":"",
-"description":"",
-"type":"object",
-"allOf": [
-   {"$ref":"../../core/GeoLocBase.schema.json" },
-   {"not": {"required": ["altitude"]}},
-   {"not": {"required": ["mcilwain_l"]}},
-   {"not": {"required": ["geoloc_time"]}}
-]
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMGeoLocBase.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "",
+  "description": "",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../core/GeoLocBase.schema.json"
+    },
+    {
+      "not": {
+        "required": [
+          "altitude"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "mcilwain_l"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "geoloc_time"
+        ]
+      }
+    }
+  ],
+  "dependentRequired": {
+    "latitude": [
+      "longitude"
+    ],
+    "longitude": [
+      "latitude"
+    ]
+  }
 }

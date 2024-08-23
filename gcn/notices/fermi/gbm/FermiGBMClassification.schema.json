@@ -70,11 +70,8 @@
         }
       },
       "minProperties": 1,
-      "maxProperties": 2
+      "maxProperties": 2,
+      "unevaluatedProperties": false
     }
-  },
-  "required": [
-    "classification"
-  ],
-  "unevaluatedProperties": false
+  }
 }
