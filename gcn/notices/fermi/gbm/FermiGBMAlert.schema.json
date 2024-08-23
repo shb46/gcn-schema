@@ -1,0 +1,24 @@
+{
+"$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"title": "Schema for Fermi GBM GCN notices",
+"description": "This schema is used to report on Fermi GBM transients, incl. detections from the gorund subthreshold search.",
+"type": "object",
+"allOf": [
+   { "$ref": "FermiGBMBase.schema.json"},
+   { "$ref": "FermiGBMDetectorStatus.schema.json"},
+   { "$ref": "FermiGBMGeoLocBase.schema.json"},
+
+   {"not": {"required": ["rate_snr"]}},
+   {"not": {"required": ["rate_duration"]}},
+   {"not": {"required": ["classification"]}}
+],
+
+"properties": {
+   "TRIGGER_ALGORITHM_NUMBER": {
+      "type": "number",
+      "description": "Flight software critetrion number that caused the trigger. This is not a version number."
+   }
+},
+"unevaluatedProperties": false
+}
