@@ -7,6 +7,8 @@ from jsonschema import validate, Draft202012Validator
 from referencing import Registry, Resource
 import unittest
 
+from fermi_gbm_fields import FIELDS
+
 def RETRIEVE_LOCAL_FILE(uri):
    #parsed = urlsplit(uri)
    u = uri.replace("https://gcn.nasa.gov/schema/main", "../../../../..")
@@ -45,6 +47,14 @@ class TestAlert(unittest.TestCase):
 if __name__ == "__main__":
    my_schema = "../alert.schema.json"
    my_schema = os.path.abspath(my_schema)
+
+   s = "{\n"
+   s = [ f'  "{fld}":"1"' for fld,(nots,sch) in FIELDS.items() if nots[0] ]
+   n = len(s)
+   s = "\n".join(s)
+   s = '{\n\n' + s + '\n\n}'
+   print(s)
+   exit(0)
 
    with open(my_schema) as s:
       my_schema = s.read()
