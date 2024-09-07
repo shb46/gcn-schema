@@ -6,6 +6,11 @@
 "type":"object",
 "allOf": [
    {"$ref":"../../core/AdditionalInfo.schema.json" },
+   { "properties": {
+    "additional_info": {
+         "default":""
+      }
+   }},
 
    {"$ref":"../../core/Alert.schema.json" },
    {"required": ["alert_datetime", "alert_tense", "alert_type"]},
@@ -64,7 +69,6 @@
    {"not": {"required": ["flux_time_range"]}},
    {"not": {"required": ["fluence"]}},
    {"not": {"required": ["fluence_error"]}},
-   {"required":["trigger_type"]},
    { "properties": {
       "trigger_type":{
          "const": "rate",
