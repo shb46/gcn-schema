@@ -1,33 +1,33 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "GCN Schema for Fermi GBM Alert Notices",
   "description": "This schema is used to report Fermi GBM Alerts.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../../AdditionalInfo.schema.json"
+      "$ref": "../../core/AdditionalInfo.schema.json"
     },
     {
-      "$ref": "../../Alert.schema.json"
+      "$ref": "../../core/Alert.schema.json"
     },
     {
-      "$ref": "../../DateTime.schema.json"
+      "$ref": "../../core/DateTime.schema.json"
     },
     {
-      "$ref": "../../Event.schema.json"
+      "$ref": "../../core/Event.schema.json"
     },
     {
-      "$ref": "../../GeoLocBase.schema.json"
+      "$ref": "../../core/GeoLocBase.schema.json"
     },
     {
-      "$ref": "../../Reporter.schema.json"
+      "$ref": "../../core/Reporter.schema.json"
     },
     {
-      "$ref": "../../Statistics.schema.json"
+      "$ref": "../../core/Statistics.schema.json"
     },
     {
-      "$ref": "../../FermiGBMDetectors.schema.json"
+      "$ref": "detectors.schema.json"
     }
   ],
   "properties": {
@@ -37,7 +37,7 @@
     },
     "hitl": {
       "type": "boolean",
-      "description": "Human in the loop"
+      "description": "\"Human in the loop\".  When false, the notice was generated entirely automatically.  A value of true means that a human had an input, while the notice was being prepared.  The latter includes notices, which weren't altered by the human input, i.e. simply confirmed or approved by a human for further processing."
     },
     "trigger_algorithm_number": {
       "type": "number",

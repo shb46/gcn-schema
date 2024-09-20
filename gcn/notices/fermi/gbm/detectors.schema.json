@@ -1,11 +1,11 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMDetectorStatus.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/detectors.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "",
   "description": "",
   "type": "object",
   "properties": {
-    "DETECTORS_STATUS": {
+    "detectors_status": {
       "type": "array",
       "items": {
         "$ref": "../../core/DetectorStatus.schema.json"
