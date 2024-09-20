@@ -1,0 +1,47 @@
+{
+  "alert_datetime": "2024-08-24T02:14:54",
+  "notice_type": "FERMI_GBM_ALERT",
+  "record_number": 1,
+  "id": [
+    "745121685",
+    "bn240812094"
+  ],
+  "trigger_time": "2024-08-24T02:14:40.43",
+  "rate_snr": 4.9,
+  "rate_duration": 2.048,
+  "rate_energy_range": [
+    47,
+    291
+  ],
+  "trigger_algorithm_number": 14,
+  "detectors_status": [
+    "triggered",
+    "on",
+    "triggered",
+    "triggered",
+    "on",
+    "on",
+    "triggered",
+    "on",
+    "on",
+    "on",
+    "on",
+    "on",
+    "on",
+    "on"
+  ],
+  "latitude": 23.83,
+  "longitude": 257.4,
+  "data_archive_page": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094",
+  "light_curve_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_lc_medres34_bn240812094.gif",
+  "additional_info": "Lightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
+  "hitl": false,
+  "mission": "Fermi",
+  "instrument": "GBM",
+  "alert_type": "initial",
+  "alert_tense": "current",
+  "messenger": "EM",
+  "spectrum": "energy",
+  "units": "keV",
+  "trigger_type": "rate"
+}
