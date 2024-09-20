@@ -1,24 +1,51 @@
 {
-"$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
-"$schema": "https://json-schema.org/draft/2020-12/schema",
-"title": "Schema for Fermi GBM GCN notices",
-"description": "This schema is used to report on Fermi GBM transients, incl. detections from the gorund subthreshold search.",
-"type": "object",
-"allOf": [
-   { "$ref": "FermiGBMBase.schema.json"},
-   { "$ref": "FermiGBMDetectorStatus.schema.json"},
-   { "$ref": "FermiGBMGeoLocBase.schema.json"},
-
-   {"not": {"required": ["rate_snr"]}},
-   {"not": {"required": ["rate_duration"]}},
-   {"not": {"required": ["classification"]}}
-],
-
-"properties": {
-   "TRIGGER_ALGORITHM_NUMBER": {
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GCN Schema for Fermi GBM Alert Notices",
+  "description": "This schema is used to report Fermi GBM Alerts.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../AdditionalInfo.schema.json"
+    },
+    {
+      "$ref": "../../Alert.schema.json"
+    },
+    {
+      "$ref": "../../DateTime.schema.json"
+    },
+    {
+      "$ref": "../../Event.schema.json"
+    },
+    {
+      "$ref": "../../GeoLocBase.schema.json"
+    },
+    {
+      "$ref": "../../Reporter.schema.json"
+    },
+    {
+      "$ref": "../../Statistics.schema.json"
+    },
+    {
+      "$ref": "../../FermiGBMDetectors.schema.json"
+    }
+  ],
+  "properties": {
+    "notice_type": {
+      "type": "string",
+      "description": "Notice title"
+    },
+    "hitl": {
+      "type": "boolean",
+      "description": "Human in the loop"
+    },
+    "trigger_algorithm_number": {
       "type": "number",
-      "description": "Flight software critetrion number that caused the trigger. This is not a version number."
-   }
-},
-"unevaluatedProperties": false
+      "description": "The criterion number that caused the flight software to trigger. Not to be confused with flight software or any other version number."
+    },
+    "light_curve_url": {
+      "type": "string",
+      "description": "URL of the quicklook light curve plot"
+    }
+  }
 }

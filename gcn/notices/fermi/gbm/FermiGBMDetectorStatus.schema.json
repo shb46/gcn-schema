@@ -1,22 +1,18 @@
 {
-"$id":"https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMDetectorStatus.schema.json",
-"$schema":"https://json-schema.org/draft/2020-12/schema",
-"title":"",
-"description":"",
-"type":"object",
-
-"properties": {
-   "DETECTORS_STATUS": {
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMDetectorStatus.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "DETECTORS_STATUS": {
       "type": "array",
       "items": {
-         "$ref": "../../core/DetectorStatus.schema.json"
+        "$ref": "../../core/DetectorStatus.schema.json"
       },
       "minItems": 14,
       "maxItems": 14,
       "description": "Triggered detectors"
-   }
-},
-
-"required": ["DETECTORS_STATUS"]
-
+    }
+  }
 }
