@@ -135,5 +135,4 @@ FIELD_DEFS_BY_NOTICE = (
 ("DURATION_CLASS",   0,   (False,False,True,True,True),   ("str",   0,   ["UNCERTAIN","SHORT","LONG", "null"],   "null",   [],   []),   ),
 ("RELIABILITY",   0,   (False,False,False,False,True),   ("str",   0,   ["LOW","MED","HIGH"],   None,   [],   []),   ),
 
-
 )
