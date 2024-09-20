@@ -6,7 +6,7 @@
 "type":"object",
 
 "properties": {
-   "DETECTORS_STATUS": {
+   "detectors_status": {
       "type": "array",
       "items": {
          "$ref": "../../core/DetectorStatus.schema.json"
