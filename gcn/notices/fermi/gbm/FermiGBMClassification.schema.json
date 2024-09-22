@@ -55,7 +55,7 @@
           "$ref": "#/properties/classification/$defs/P",
           "description": "A terrestial gamma flash. (Classic notice numeric code: 19)"
         },
-         "DUP": {
+        "DUP": {
           "$ref": "#/properties/classification/$defs/P",
           "description": "If the class is repeated by mistake, this is second probability."
         }

@@ -20,14 +20,9 @@
     "on",
     "on"
   ],
-  "event_name": [
-    "GRB240824A"
-  ],
+  "event_name": ["GRB240824A"],
   "hitl": false,
-  "id": [
-    "745121685",
-    "bn240812094"
-  ],
+  "id": ["745121685", "bn240812094"],
   "instrument": "GBM",
   "latitude": 23.83,
   "light_curve_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_lc_medres34_bn240812094.gif",
@@ -36,10 +31,7 @@
   "mission": "Fermi",
   "notice_type": "FERMI_GBM_ALERT",
   "rate_duration": 2.048,
-  "rate_energy_range": [
-    47,
-    291
-  ],
+  "rate_energy_range": [47, 291],
   "rate_snr": 4.9,
   "record_number": 1,
   "spectrum": "energy",

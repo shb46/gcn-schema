@@ -7,9 +7,7 @@
   "allOf": [
     {
       "not": {
-        "required": [
-          "instrument_semimajor_angle"
-        ]
+        "required": ["instrument_semimajor_angle"]
       }
     },
     {
@@ -22,9 +20,7 @@
     }
   ],
   "dependentRequired": {
-    "healpix_file": [
-      "ra"
-    ],
+    "healpix_file": ["ra"],
     "ra": [
       "dec",
       "ra_dec_error",
@@ -34,26 +30,12 @@
       "instrument_theta",
       "healpix_url"
     ],
-    "dec": [
-      "ra"
-    ],
-    "ra_dec_error": [
-      "ra"
-    ],
-    "containment_probability": [
-      "ra"
-    ],
-    "systematic_included": [
-      "ra"
-    ],
-    "instrument_phi": [
-      "ra"
-    ],
-    "instrument_theta": [
-      "ra"
-    ],
-    "healpix_url": [
-      "ra"
-    ]
+    "dec": ["ra"],
+    "ra_dec_error": ["ra"],
+    "containment_probability": ["ra"],
+    "systematic_included": ["ra"],
+    "instrument_phi": ["ra"],
+    "instrument_theta": ["ra"],
+    "healpix_url": ["ra"]
   }
 }
