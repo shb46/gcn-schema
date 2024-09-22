@@ -1,19 +1,9 @@
 {
+  "additional_info": "*** PREFACE TO THIS EXAMPLE: This is an example of a Fermi GBM Alert GCN notice. All possible properties are present. This preface uses a field reserved for free-text comments to the notice. The preface is not going to be part of a real-life notice but here might be other comments. This field may be missing or empty in case of no comments. An example of a typical notice comment follows. ***\n\nLightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
   "alert_datetime": "2024-08-24T02:14:54",
-  "notice_type": "FERMI_GBM_ALERT",
-  "record_number": 1,
-  "id": [
-    "745121685",
-    "bn240812094"
-  ],
-  "trigger_time": "2024-08-24T02:14:40.43",
-  "rate_snr": 4.9,
-  "rate_duration": 2.048,
-  "rate_energy_range": [
-    47,
-    291
-  ],
-  "trigger_algorithm_number": 14,
+  "alert_tense": "current",
+  "alert_type": "initial",
+  "data_archive_page": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094",
   "detectors_status": [
     "triggered",
     "on",
@@ -30,18 +20,31 @@
     "on",
     "on"
   ],
-  "latitude": 23.83,
-  "longitude": 257.4,
-  "data_archive_page": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094",
-  "light_curve_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_lc_medres34_bn240812094.gif",
-  "additional_info": "Lightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
+  "event_name": [
+    "GRB240824A"
+  ],
   "hitl": false,
-  "mission": "Fermi",
+  "id": [
+    "745121685",
+    "bn240812094"
+  ],
   "instrument": "GBM",
-  "alert_type": "initial",
-  "alert_tense": "current",
+  "latitude": 23.83,
+  "light_curve_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2024/bn240812094/quicklook/glg_lc_medres34_bn240812094.gif",
+  "longitude": 257.4,
   "messenger": "EM",
+  "mission": "Fermi",
+  "notice_type": "FERMI_GBM_ALERT",
+  "rate_duration": 2.048,
+  "rate_energy_range": [
+    47,
+    291
+  ],
+  "rate_snr": 4.9,
+  "record_number": 1,
   "spectrum": "energy",
-  "units": "keV",
-  "trigger_type": "rate"
+  "trigger_algorithm_number": 14,
+  "trigger_time": "2024-08-24T02:14:40.43",
+  "trigger_type": "rate",
+  "units": "keV"
 }
