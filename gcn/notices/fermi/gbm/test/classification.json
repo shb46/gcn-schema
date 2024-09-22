@@ -1,9 +1,0 @@
-{
-  ...
-  "classification": {
-    "UNRELIABLE_LOCATION": 1
-    "GRB": 0.83,
-    "GENERIC_TRANSIENT": 0.12
-  }
-  ...
-}
