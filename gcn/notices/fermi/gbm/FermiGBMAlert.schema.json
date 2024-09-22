@@ -6,28 +6,28 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "../../AdditionalInfo.schema.json"
+      "$ref": "../../core/AdditionalInfo.schema.json"
     },
     {
-      "$ref": "../../Alert.schema.json"
+      "$ref": "../../core/Alert.schema.json"
     },
     {
-      "$ref": "../../DateTime.schema.json"
+      "$ref": "../../core/DateTime.schema.json"
     },
     {
-      "$ref": "../../Event.schema.json"
+      "$ref": "../../core/Event.schema.json"
     },
     {
-      "$ref": "../../GeoLocBase.schema.json"
+      "$ref": "../../core/GeoLocBase.schema.json"
     },
     {
-      "$ref": "../../Reporter.schema.json"
+      "$ref": "../../core/Reporter.schema.json"
     },
     {
-      "$ref": "../../Statistics.schema.json"
+      "$ref": "../../core/Statistics.schema.json"
     },
     {
-      "$ref": "../../FermiGBMDetectors.schema.json"
+      "$ref": "FermiGBMDetectors.schema.json"
     }
   ],
   "properties": {
