@@ -21,7 +21,7 @@
     "on",
     "on"
   ],
-  "event_name": "GRB240824A",
+  "event_name": ["GRB240824A"],
   "hitl": false,
   "id": ["745121685", "bn240812094"],
   "instrument": "GBM",
