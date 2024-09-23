@@ -2,11 +2,16 @@
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/FermiGBMAlert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "GCN Schema for Fermi GBM Alert Notices",
-  "description": "This schema is a stricter version of 'https://gcn.nasa.gov/schema/main/gcn/notices/core/AdditionalInfo.schema.json'. The GCN classic notice numeric type is 110.",
+  "description": "This schema is a stricter version of https://gcn.nasa.gov/schema/main/gcn/notices/core/AdditionalInfo.schema.json. The GCN classic notice numeric type is 110.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "const": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+      "description": "Required by GCN"
+    },
     "additional_info": {
       "type": "string",
+      "default": null,
       "description": "Free text comments about the event and the notice."
     },
     "alert_datetime": {
