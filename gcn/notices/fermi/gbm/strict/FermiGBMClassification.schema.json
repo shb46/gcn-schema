@@ -1,5 +1,5 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMClassification.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/FermiGBMClassification.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Schema for Fermi GBM GCN notices",
   "description": "",
