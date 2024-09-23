@@ -4,21 +4,12 @@
   "type": "object",
   "title": "Localization",
   "description": "Localization of transient",
-  "allOf": [
-    {
-      "not": {
-        "required": ["instrument_semimajor_angle"]
-      }
-    },
-    {
-      "properties": {
-        "ra_dec_error": {
-          "type": "number",
-          "description": "Uncertainty region described as a circle with a radius [deg]."
-        }
-      }
+  "properties": {
+    "ra_dec_error": {
+      "type": "number",
+      "description": "Uncertainty region described as a circle with a radius [deg]."
     }
-  ],
+  },
   "dependentRequired": {
     "healpix_file": ["ra"],
     "ra": [
