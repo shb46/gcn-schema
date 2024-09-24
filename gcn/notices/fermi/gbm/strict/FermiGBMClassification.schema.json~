@@ -1,0 +1,81 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/FermiGBMClassification.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for Fermi GBM GCN notices",
+  "description": "",
+  "properties": {
+    "classification": {
+      "type": "object",
+      "properties": {
+        "UNRELIABLE_LOCATION": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "Localization failed. If present, should be the only cand and should be a probability of 100%. (Classic notice numeric code: 1)"
+        },
+        "LOCAL_PARTICLES": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "Local particles (equal rates in opposite detectors). If present, should be the only cand and should be with a probability of 100%. (Classic notice numeric code: 2)"
+        },
+        "BELOW_HORIZON": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "Distant particles, assumed to come from the horizon. If present, should be the only class and should be a probability of 100%. (Classic notice numeric code: 3)"
+        },
+        "GRB": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "For bursts with good localizations. (Classic notice numeric code: 4)"
+        },
+        "GENERIC_SGR": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "This is any SGR, except 1806-20. (Classic notice numeric code: 5)"
+        },
+        "GENERIC_TRANSIENT": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "Any astrophysical transient not included elsewhere. (Classic notice numeric code: 6)"
+        },
+        "DISTANT_PARTICLES": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "Particles at a distance. (Classic notice numeric code: 7)"
+        },
+        "SOLAR_FLARE": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "This is a Solar flare event. (Classic notice numeric code: 8)"
+        },
+        "CYG_X1": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "This trigger was caused by a CygX1 fluctuation. (Classic notice numeric code: 9)"
+        },
+        "SGR_1806_20": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "This trigger came from SGR 1806-20. (Classic notice numeric code: 10)"
+        },
+        "GROJ_0422_32": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "This trigger came from GROJ0422-32. (Classic notice numeric code: 11)"
+        },
+        "TGF": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "A terrestial gamma flash. (Classic notice numeric code: 19)"
+        },
+        "DUP": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "If the class is repeated by mistake, this is second probability."
+        }
+      },
+      "patternProperties": {
+        "^CLASS_[0-9][0-9][0-9]$": {
+          "$ref": "#/properties/classification/$defs/P",
+          "description": "CLASS_XYZ stands for an undefined source class with a numeric code XYZ."
+        }
+      },
+      "$defs": {
+        "P": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "minProperties": 1,
+      "maxProperties": 2,
+      "unevaluatedProperties": false
+    }
+  }
+}
