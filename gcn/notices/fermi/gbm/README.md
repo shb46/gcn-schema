@@ -28,10 +28,7 @@ When a GBM trigger occurs, the spacecraft issues an Alert notice withing seconds
 | Final Position  | 115            | Ground | Yes            | No             | 0-1   | Minutes     |
 | Final Position  | 115            | Human           | Yes            | No             | 0+    | Hours       |
 
-ALERT FLIGHT+ GROUND* 
-
-
-
+![](NoticesSequence.jpg)
 
 
 ##Subthreshold Notices
