@@ -6,7 +6,10 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "const": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+      "enum": [
+        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/FermiGBMStrictAlert.schema.json"
+      ],
       "description": "Required by GCN"
     },
     "additional_info": {
