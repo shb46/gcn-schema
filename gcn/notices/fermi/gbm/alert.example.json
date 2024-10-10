@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
+  "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
   "additional_info": "Lightcurve and other quicklook files will not be created until about 15 minutes after the trigger.",
   "alert_datetime": "2024-08-24T02:14:54",
   "alert_tense": "current",
