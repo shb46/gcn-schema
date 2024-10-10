@@ -27,7 +27,7 @@
       "$ref": "../../core/Statistics.schema.json"
     },
     {
-      "$ref": "FermiGBMDetectors.schema.json"
+      "$ref": "detectors.schema.json"
     }
   ],
   "properties": {
