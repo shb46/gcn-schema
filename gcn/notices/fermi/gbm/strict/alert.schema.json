@@ -7,8 +7,8 @@
   "properties": {
     "$schema": {
       "enum": [
-        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/FermiGBMAlert.schema.json",
-        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/FermiGBMStrictAlert.schema.json"
+        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/alert.schema.json",
+        "https://gcn.nasa.gov/schema/main/gcn/notices/fermi/gbm/strict/alert.schema.json"
       ],
       "description": "Required by GCN"
     },
